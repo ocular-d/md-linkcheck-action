@@ -2,4 +2,4 @@
 
 A GitHub action to check links in Markdown files
 
-[test](https://github.com)
+[test link](https://github.com)
