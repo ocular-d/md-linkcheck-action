@@ -17,4 +17,5 @@ RUN apk add --no-cache bash nodejs npm \
 COPY entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /entrypoint.sh
+#ENTRYPOINT ["bash"]
 ENTRYPOINT ["/entrypoint.sh"]
