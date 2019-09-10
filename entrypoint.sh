@@ -8,11 +8,10 @@ COL_RESET=$ESC_SEQ"39;49;00m"
 COL_YELLOW=$ESC_SEQ"33;01m"
 COL_RED=$ESC_SEQ"31;01m"
 
-echo "$COL_YELLOW=========================> MARKDOWN LINK CHECK <=========================$COL_RESET\n"
+echo "Running checks ..."
 
-find . -name \*.md -not -path "./node_modules/*" -exec markdown-link-check {} \; 2> error.txt
+exec markdown-link-check {} \; 2> error.txt
 
-echo "$COL_YELLOW=========================================================================$COL_RESET\n"
 
 if [ -e error.txt ] ; then
   if grep -q "ERROR:" error.txt; then
