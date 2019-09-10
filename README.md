@@ -1,2 +1,5 @@
 # md-linkcheck-action
-A GItHub action to check links in Markdown files
+
+A GitHub action to check links in Markdown files
+
+[test](https://github.com)
