@@ -11,7 +11,7 @@ LABEL maintainer="svx <sven@testthedocs.org>"
 ENV MD_LINKCHECK 3.7.3
 
 # Install
-RUN apk add --no-cache bash nodejs npm \
+RUN apk add --no-cache bash nodejs npm fd \
     && npm install --no-cache -g markdown-link-check@${MD_LINKCHECK}
 
 COPY entrypoint.sh /entrypoint.sh

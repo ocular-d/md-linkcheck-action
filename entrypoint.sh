@@ -4,18 +4,19 @@ set -eou pipefail
 
 # Vars
 ESC_SEQ="\x1b["
-COL_RESET=$ESC_SEQ"39;49;00m"
-COL_YELLOW=$ESC_SEQ"33;01m"
-COL_RED=$ESC_SEQ"31;01m"
+RESET=$ESC_SEQ"39;49;00m"
+YELLOW=$ESC_SEQ"33;01m"
+RED=$ESC_SEQ"31;01m"
 
-echo "Running checks ..."
+echo -e "${YELLOW}==> Checking Links <==${RESET}"
 
-exec markdown-link-check {} \; 2> error.txt
+fd -e md -x markdown-link-check {}
+#exec markdown-link-check {} \; 2> error.txt
 
 
 if [ -e error.txt ] ; then
   if grep -q "ERROR:" error.txt; then
-    echo "$COL_REDPlease check the log$COL_RESET\n"
+    echo -e "${RED}Please check the log${RESET}"
     exit 1
   fi
 fi
