@@ -11,11 +11,17 @@ LABEL maintainer="svx <sven@testthedocs.org>"
 ENV MD_LINKCHECK 3.7.3
 
 # Install
-RUN apk add --no-cache bash nodejs npm fd \
+RUN apk add --no-cache \
+        bash \
+        nodejs \
+        npm \
+    && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
+        fd \
     && npm install --no-cache -g markdown-link-check@${MD_LINKCHECK}
 
-COPY entrypoint.sh /entrypoint.sh
+WORKDIR /srv
+COPY entrypoint.sh entrypoint.sh
 
-RUN chmod +x /entrypoint.sh
+RUN chmod +x entrypoint.sh
 #ENTRYPOINT ["bash"]
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["entrypoint.sh"]
