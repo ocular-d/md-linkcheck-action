@@ -10,7 +10,7 @@ RED=$ESC_SEQ"31;01m"
 
 echo -e "${YELLOW}==> Checking Links <==${RESET}"
 
-fd -e md -x markdown-link-check {}
+fd -e md -x markdown-link-check {} \; 2> error.txt
 #exec markdown-link-check {} \; 2> error.txt
 
 
