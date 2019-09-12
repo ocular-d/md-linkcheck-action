@@ -31,6 +31,9 @@
 
 A GitHub action based on [markdown-link-check](https://github.com/tcort/markdown-link-check "Link to markdown-link-check repository") for validating links in Markdown based files.
 
+## Features
+
+- Uses [fd](https://github.com/sharkdp/fd "Link to `fd` on GitHub") and not `find`
 
 ## Contributing
 
