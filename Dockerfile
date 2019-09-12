@@ -11,6 +11,7 @@ LABEL maintainer="svx <sven@testthedocs.org>"
 ENV MD_LINKCHECK 3.7.3
 
 # Install
+# hadolint ignore=DL3018
 RUN apk add --no-cache \
         bash \
         nodejs \
