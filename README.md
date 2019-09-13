@@ -35,6 +35,53 @@ A GitHub action based on [markdown-link-check](https://github.com/tcort/markdown
 
 - Uses [fd](https://github.com/sharkdp/fd "Link to `fd` on GitHub") and not `find`
 
+## Configuration Examples
+
+### Run On Push
+
+Create a new file in your repository `.github/workflows/linkcheck.yml`.
+
+```yml
+on:
+  push:
+    paths:
+    - '*.md'
+    - '/docs/*'
+name: Testing linkcheck
+jobs:
+  markdown-link-check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: md-linkcheck
+      uses: ./
+```
+
+This will run this action everytime you `push` Markdown files `.md` to the root of the repository
+or do the top level of your `/docs` repository.
+
+Run As Cron
+
+```yml
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '*/15 * * * *'
+    paths:
+    - '*.md'
+    - '/docs/*'
+name: Testing linkcheck
+jobs:
+  markdown-link-check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: md-linkcheck
+      uses: ./
+```
+
+This will run this action every 15 minutes.
+
 ## Contributing
 
 We are a community effort, and everybody is most welcome to participate!
