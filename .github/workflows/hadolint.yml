@@ -1,4 +1,7 @@
-on: push
+on:
+  push:
+    paths:
+    - Dockerfile
 name: Lint all Dockerfiles
 jobs:
   linter:
