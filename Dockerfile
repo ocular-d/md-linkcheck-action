@@ -1,6 +1,6 @@
 FROM alpine:3.10
 LABEL "com.github.actions.name"="md-linkcheck"
-LABEL "com.github.actions.description"="Validate links in markdown files."
+LABEL "com.github.actions.description"="Validate links in Markdown files."
 LABEL "com.github.actions.icon"="link"
 LABEL "com.github.actions.color"="green"
 LABEL "repository"="https://github.com/testthedocs/md-linkcheck-action.git"
