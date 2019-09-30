@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/testthedocs/md-linkcheck-action">
+  <a href="https://github.com/ocular-d/md-linkcheck-action">
     <img src="assets/linkcheck-logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -10,12 +10,12 @@
   <p align="center">
     This GitHub action checks all Markdown files in your repository for broken links.
     <br />
-    <a href="https://github.com/testthedocs/md-linkcheck-action"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/ocular-d/md-linkcheck-action"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/testthedocs/md-linkcheck-action/issues">Report Bug</a>
+    <a href="https://github.com/ocular-d/md-linkcheck-action/issues">Report Bug</a>
     ·
-    <a href="https://github.com/testthedocs/md-linkcheck-action/issues">Request Feature</a>
+    <a href="https://github.com/ocular-d/md-linkcheck-action/issues">Request Feature</a>
   </p>
 </p>
 
@@ -57,7 +57,7 @@ jobs:
       uses: ./
 ```
 
-This will run this action everytime you `push` Markdown files `.md` to the root of the repository
+This will run this action every time you `push` Markdown files `.md` to the root of the repository
 or do the top level of your `/docs` repository.
 
 Run As Cron
