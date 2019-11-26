@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.2] - 2019-11-26
+
+### Fixed
+
+- #9 Failing docker builds because of repo changes
+
 ## [1.0.1] - 2019-09-14
 
 ### Fixed
