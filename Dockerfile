@@ -11,12 +11,16 @@ LABEL maintainer="svx <sven@testthedocs.org>"
 ENV MD_LINKCHECK 3.7.3
 
 # Install
+# Note Alpine changed repos for installing fd we
+# need to use the community repo now
+# apk add fd --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
+# See below :)
 # hadolint ignore=DL3018
 RUN apk add --no-cache \
         bash \
         nodejs \
         npm \
-    && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing \
+    && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/community \
         fd \
     && npm install --no-cache -g markdown-link-check@${MD_LINKCHECK}
 
