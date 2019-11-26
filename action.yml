@@ -1,0 +1,9 @@
+name: 'md-linkcheck'
+description: 'Validate links in Markdown files'
+author: 'ocular-d'
+branding:
+  icon: 'link'
+  color: 'green'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

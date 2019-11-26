@@ -8,6 +8,10 @@ All notable changes to this project will be documented in this file.
 
 - #9 Failing docker builds because of repo changes
 
+### Update
+
+- Update md-linkcheck to 3.8.0
+
 ## [1.0.1] - 2019-09-14
 
 ### Fixed

@@ -8,7 +8,7 @@ LABEL "homepage"="https://github.com/testthedocs/md-linkcheck-action"
 LABEL maintainer="svx <sven@testthedocs.org>"
 
 # Version of markdown-link-check
-ENV MD_LINKCHECK 3.7.3
+ENV MD_LINKCHECK 3.8.0
 
 # Install
 # Note Alpine changed repos for installing fd we
