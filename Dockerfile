@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM alpine:3.11
 LABEL "com.github.actions.name"="md-linkcheck"
 LABEL "com.github.actions.description"="Validate links in Markdown files."
 LABEL "com.github.actions.icon"="link"
