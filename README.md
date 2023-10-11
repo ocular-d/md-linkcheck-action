@@ -54,7 +54,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: md-linkcheck
-      uses: ./
+      uses: ocular-d/md-linkcheck-action@master
 ```
 
 This will run this action every time you `push` Markdown files `.md` to the root of the repository
@@ -77,7 +77,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: md-linkcheck
-      uses: ./
+      uses: ocular-d/md-linkcheck-action@master
 ```
 
 This will run this action every 15 minutes.
