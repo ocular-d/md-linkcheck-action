@@ -19,6 +19,8 @@
   </p>
 </p>
 
+> This project is deprecated.
+
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
